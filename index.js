@@ -14,8 +14,8 @@ app.use(session({
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.set("view engine","ejs")
-//const baseUrl ="https://two-factor-authy.herokuapp.com/"
-const baseUrl ="http://localhost:8081/"
+const baseUrl ="https://two-factor-authy.herokuapp.com/"
+//const baseUrl ="http://localhost:8081/"
 
 const auth = (req,res,next) =>{
   console.log("Authorization Check")
