@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 require('dotenv').config();
 var bodyParser = require('body-parser')
-const client = require('twilio')("AC18e83f6668a2fd76c6c8c4d700d233f1", "qRBMWTVeq9nqPPH9Swu6lm1kW5ToDpTk");  
+const client = require('twilio')("AC18e83f6668a2fd76c6c8c4d700d233f1", "cef54d4db6219c30919ed84a5b3383bc");  
 var session = require('express-session');
 app.use(session({
   secret: 'random string',
@@ -14,8 +14,8 @@ app.use(session({
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.set("view engine","ejs")
-const baseUrl ="https://two-factor-authy.herokuapp.com/"
-//const baseUrl ="http://localhost:8081/"
+//const baseUrl ="https://two-factor-authy.herokuapp.com/"
+const baseUrl ="http://localhost:8081/"
 
 const auth = (req,res,next) =>{
   console.log("Authorization Check")
